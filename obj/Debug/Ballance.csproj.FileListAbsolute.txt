@@ -1,0 +1,12 @@
+C:\dev\Ballance\bin\Debug\Ballance.exe.config
+C:\dev\Ballance\bin\Debug\Ballance.exe
+C:\dev\Ballance\bin\Debug\Ballance.pdb
+C:\dev\Ballance\obj\Debug\Ballance.csproj.AssemblyReference.cache
+C:\dev\Ballance\obj\Debug\Ballance.csproj.SuggestedBindingRedirects.cache
+C:\dev\Ballance\obj\Debug\Ballance.F_Login.resources
+C:\dev\Ballance\obj\Debug\Ballance.Properties.Resources.resources
+C:\dev\Ballance\obj\Debug\Ballance.csproj.GenerateResource.cache
+C:\dev\Ballance\obj\Debug\Ballance.csproj.CoreCompileInputs.cache
+C:\dev\Ballance\obj\Debug\Ballance.exe
+C:\dev\Ballance\obj\Debug\Ballance.pdb
+C:\dev\Ballance\obj\Debug\Ballance.View.F_Main.resources
