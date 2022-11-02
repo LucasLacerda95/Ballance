@@ -1,4 +1,5 @@
-﻿using Ballance.Model.DataModels;
+﻿using Ballance.Controller;
+using Ballance.Model.DataModels;
 using Ballance.Model.Repositories;
 using Microsoft.Data.SqlClient;
 using System;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
+using Ballance.Controller;
 
 namespace Ballance.Model {
     internal class DataAcess {
@@ -20,11 +22,13 @@ namespace Ballance.Model {
             return connection;
         }
 
-        public static void ReadUsers(SqlConnection connection) {
+        public static User ReadUser(SqlConnection connection) {
 
             var repository = new UserRepository(connection);
-            var users = repository.Get();
+            var controller = new LoginController();
+            var user = repository.Get(controller.setUserForm());
 
+            return user;
         }
     }
 }

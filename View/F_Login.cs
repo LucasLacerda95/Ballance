@@ -1,4 +1,5 @@
 ﻿using Ballance.Controller;
+using Ballance.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,15 @@ namespace Ballance {
             string user = tb_user.Text;
             string password = tb_password.Text;
 
-            var validation = new LoginValidation(user, password);
+            if (user == "" || password == "") {
+                MessageBox.Show("Usuário ou senha inválidos !");
+                return;
+            }
+
+            var userController = new LoginController(user, password);
+            
+
+            
         }
 
     }

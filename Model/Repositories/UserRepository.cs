@@ -17,8 +17,8 @@ namespace Ballance.Model.Repositories {
         public IEnumerable<User> Get()
             => _connection.GetAll<User>();
 
-        public User Get(int id)
-            => _connection.Get<User>(id);
+        public User Get(string userName)
+            => _connection.Get<User>(userName);
         
         public void Create(User user) {
             user.Id = 0;
