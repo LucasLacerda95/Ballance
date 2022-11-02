@@ -1,47 +1,38 @@
 ﻿using Ballance.Model.DataModels;
-using Dapper.Contrib.Extensions;
+using Dapper;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Ballance.Model.Repositories {
     internal class UserRepository {
+
         private readonly SqlConnection _connection;
 
         public UserRepository(SqlConnection connection)
             => _connection = connection;
 
-        public IEnumerable<User> Get()
-            => _connection.GetAll<User>();
+        public User Get(string user) {
+            var item = new User();
 
-        public User Get(string userName)
-            => _connection.Get<User>(userName);
-        
-        public void Create(User user) {
-            user.Id = 0;
-            _connection.Insert(user);
-        }
+            try {
+                var query = @"SELECT * FROM [User] WHERE [user_Name] = @exp";
 
-        public void Update(User user) {
-            if(user.Id != 0)
-                _connection.Update<User>(user);
-        }
+                    item = _connection.QuerySingle<User>(query, new {
+                    exp = $"{user}"
+                });
 
-        public void Delete(User user) {
-            if(user.Id != 0)
-                _connection.Delete<User>(user);
-        }
-
-        public void Delete(int id) {
-            if (id != 0)
-                return;
-
-            var user = _connection.Get<User>(id);
-            _connection.Delete(user);
-        }
-    
+                _connection.Close();
+                return item;
+            } catch(Exception ex) {
+                
+                return item;
+            }
+        }  
     }
 }

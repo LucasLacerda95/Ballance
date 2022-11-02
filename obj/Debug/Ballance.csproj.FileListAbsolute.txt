@@ -12,7 +12,6 @@ C:\dev\Ballance\obj\Debug\Ballance.pdb
 C:\dev\Ballance\obj\Debug\Ballance.View.F_Main.resources
 C:\dev\Ballance\bin\Debug\Azure.Core.dll
 C:\dev\Ballance\bin\Debug\Azure.Identity.dll
-C:\dev\Ballance\bin\Debug\Dapper.Contrib.dll
 C:\dev\Ballance\bin\Debug\Dapper.dll
 C:\dev\Ballance\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\dev\Ballance\bin\Debug\Microsoft.Data.SqlClient.dll
@@ -43,7 +42,6 @@ C:\dev\Ballance\bin\Debug\System.ValueTuple.dll
 C:\dev\Ballance\bin\Debug\Azure.Core.xml
 C:\dev\Ballance\bin\Debug\Azure.Identity.xml
 C:\dev\Ballance\bin\Debug\Dapper.xml
-C:\dev\Ballance\bin\Debug\Dapper.Contrib.xml
 C:\dev\Ballance\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 C:\dev\Ballance\bin\Debug\Microsoft.Data.SqlClient.pdb
 C:\dev\Ballance\bin\Debug\Microsoft.Data.SqlClient.xml

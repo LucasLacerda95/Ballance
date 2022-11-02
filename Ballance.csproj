@@ -184,7 +184,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\DataAcess.cs" />
     <Compile Include="Model\DataModels\User.cs" />
     <Compile Include="Model\Repositories\UserRepository.cs" />
