@@ -21,8 +21,7 @@ namespace Ballance.Model {
             var connection = new SqlConnection(CONNECTION_STRING);
 
             connection.Open();
-            return connection;
+            return connection;            
         }
-        
     }
 }
