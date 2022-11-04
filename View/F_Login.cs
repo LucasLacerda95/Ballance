@@ -28,12 +28,6 @@ namespace Ballance {
             string user = tb_user.Text;
             string password = tb_password.Text;
 
-            if (user == "" || password == "") {
-                MessageBox.Show("Usuário ou senha inválidos !");
-                tb_user.Clear();
-                tb_password.Clear();
-                tb_user.Focus();
-            }
 
             var controller = new UserController(user, password);
             var access = controller.ReadUser();
@@ -46,7 +40,7 @@ namespace Ballance {
                 form.Show();//Depois entender este método do stackoverflow
 
             } else {
-                MessageBox.Show("Dados de acesso inválidos.", "Login");
+                MessageBox.Show("Dados de acesso inválidos.", "Oops..", MessageBoxButtons.OK ,MessageBoxIcon.Information);
                 tb_user.Clear();
                 tb_password.Clear();
                 tb_user.Focus();
@@ -54,5 +48,8 @@ namespace Ballance {
             
         }
 
+        private void btn_Cancel_Click(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }
