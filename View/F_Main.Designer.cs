@@ -30,20 +30,18 @@
             this.btn_Registrantions = new System.Windows.Forms.Button();
             this.btn_Transactions = new System.Windows.Forms.Button();
             this.btn_Home = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.p_mainHeader = new System.Windows.Forms.Panel();
             this.p_mainBody = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.p_mainMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.p_mainBody.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // p_mainMenu
             // 
-            this.p_mainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.p_mainMenu.BackColor = System.Drawing.Color.DimGray;
             this.p_mainMenu.Controls.Add(this.btn_Logoff);
             this.p_mainMenu.Controls.Add(this.btn_Configurations);
             this.p_mainMenu.Controls.Add(this.btn_Registrantions);
@@ -54,7 +52,7 @@
             this.p_mainMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.p_mainMenu.Location = new System.Drawing.Point(0, 0);
             this.p_mainMenu.Name = "p_mainMenu";
-            this.p_mainMenu.Size = new System.Drawing.Size(162, 661);
+            this.p_mainMenu.Size = new System.Drawing.Size(162, 507);
             this.p_mainMenu.TabIndex = 0;
             // 
             // btn_Logoff
@@ -66,7 +64,7 @@
             this.btn_Logoff.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_Logoff.Image = global::Ballance.Properties.Resources.investimento_p;
             this.btn_Logoff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Logoff.Location = new System.Drawing.Point(0, 607);
+            this.btn_Logoff.Location = new System.Drawing.Point(0, 453);
             this.btn_Logoff.Name = "btn_Logoff";
             this.btn_Logoff.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btn_Logoff.Size = new System.Drawing.Size(162, 54);
@@ -75,6 +73,7 @@
             this.btn_Logoff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Logoff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Logoff.UseVisualStyleBackColor = true;
+            this.btn_Logoff.Click += new System.EventHandler(this.btn_Logoff_Click);
             // 
             // btn_Configurations
             // 
@@ -111,6 +110,7 @@
             this.btn_Registrantions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Registrantions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Registrantions.UseVisualStyleBackColor = true;
+            this.btn_Registrantions.Click += new System.EventHandler(this.btn_Registrantions_Click);
             // 
             // btn_Transactions
             // 
@@ -149,45 +149,6 @@
             this.btn_Home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Home.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Ballance.Properties.Resources.balance_Logo_G2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(162, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // p_mainHeader
-            // 
-            this.p_mainHeader.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.p_mainHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.p_mainHeader.Location = new System.Drawing.Point(162, 0);
-            this.p_mainHeader.Name = "p_mainHeader";
-            this.p_mainHeader.Size = new System.Drawing.Size(822, 46);
-            this.p_mainHeader.TabIndex = 1;
-            // 
-            // p_mainBody
-            // 
-            this.p_mainBody.BackColor = System.Drawing.Color.White;
-            this.p_mainBody.Controls.Add(this.label1);
-            this.p_mainBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.p_mainBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p_mainBody.Location = new System.Drawing.Point(162, 46);
-            this.p_mainBody.Name = "p_mainBody";
-            this.p_mainBody.Size = new System.Drawing.Size(822, 615);
-            this.p_mainBody.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(334, 265);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bem Vindo !!";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(178)))), ((int)(((byte)(88)))));
@@ -195,14 +156,43 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(162, 110);
+            this.panel1.Size = new System.Drawing.Size(162, 99);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Ballance.Properties.Resources.balance_Logo_G2;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(137, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // p_mainHeader
+            // 
+            this.p_mainHeader.BackColor = System.Drawing.Color.LightGray;
+            this.p_mainHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.p_mainHeader.Location = new System.Drawing.Point(162, 0);
+            this.p_mainHeader.Name = "p_mainHeader";
+            this.p_mainHeader.Size = new System.Drawing.Size(653, 28);
+            this.p_mainHeader.TabIndex = 1;
+            // 
+            // p_mainBody
+            // 
+            this.p_mainBody.BackColor = System.Drawing.Color.Gainsboro;
+            this.p_mainBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p_mainBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.p_mainBody.Location = new System.Drawing.Point(162, 28);
+            this.p_mainBody.Name = "p_mainBody";
+            this.p_mainBody.Size = new System.Drawing.Size(653, 479);
+            this.p_mainBody.TabIndex = 2;
             // 
             // F_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 661);
+            this.ClientSize = new System.Drawing.Size(815, 507);
             this.Controls.Add(this.p_mainBody);
             this.Controls.Add(this.p_mainHeader);
             this.Controls.Add(this.p_mainMenu);
@@ -212,13 +202,11 @@
             this.Name = "F_Main";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ballance";
+            this.Text = "Balance";
             this.Load += new System.EventHandler(this.F_Main_Load);
             this.p_mainMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.p_mainBody.ResumeLayout(false);
-            this.p_mainBody.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,8 +215,6 @@
 
         private System.Windows.Forms.Panel p_mainMenu;
         private System.Windows.Forms.Panel p_mainHeader;
-        private System.Windows.Forms.Panel p_mainBody;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_Home;
         private System.Windows.Forms.Button btn_Logoff;
@@ -236,5 +222,6 @@
         private System.Windows.Forms.Button btn_Registrantions;
         private System.Windows.Forms.Button btn_Transactions;
         private System.Windows.Forms.Panel panel1;
+        internal System.Windows.Forms.Panel p_mainBody;
     }
 }

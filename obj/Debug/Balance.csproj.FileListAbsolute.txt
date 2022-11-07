@@ -80,3 +80,6 @@ C:\dev\Ballance\obj\Debug\Balance.csproj.CoreCompileInputs.cache
 C:\dev\Ballance\obj\Debug\Balance.csproj.CopyComplete
 C:\dev\Ballance\obj\Debug\Ballance.exe
 C:\dev\Ballance\obj\Debug\Ballance.pdb
+C:\dev\Ballance\obj\Debug\Ballance.View.Records.F_CategoriesRecords.resources
+C:\dev\Ballance\obj\Debug\Ballance.View.Records.F_UsersRecords.resources
+C:\dev\Ballance\obj\Debug\Ballance.View.Records.F_AccountsRecords.resources
