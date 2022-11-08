@@ -129,6 +129,7 @@
             this.btn_Transactions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Transactions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Transactions.UseVisualStyleBackColor = true;
+            this.btn_Transactions.Click += new System.EventHandler(this.btn_Transactions_Click);
             // 
             // btn_Home
             // 
@@ -175,7 +176,7 @@
             this.p_mainHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.p_mainHeader.Location = new System.Drawing.Point(162, 0);
             this.p_mainHeader.Name = "p_mainHeader";
-            this.p_mainHeader.Size = new System.Drawing.Size(653, 28);
+            this.p_mainHeader.Size = new System.Drawing.Size(653, 30);
             this.p_mainHeader.TabIndex = 1;
             // 
             // p_mainBody
@@ -183,9 +184,9 @@
             this.p_mainBody.BackColor = System.Drawing.Color.Gainsboro;
             this.p_mainBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p_mainBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p_mainBody.Location = new System.Drawing.Point(162, 28);
+            this.p_mainBody.Location = new System.Drawing.Point(162, 30);
             this.p_mainBody.Name = "p_mainBody";
-            this.p_mainBody.Size = new System.Drawing.Size(653, 479);
+            this.p_mainBody.Size = new System.Drawing.Size(653, 477);
             this.p_mainBody.TabIndex = 2;
             // 
             // F_Main

@@ -34,16 +34,15 @@ namespace Ballance {
 
             if (access == true) {
 
-                this.Hide();
+ 
                 var form = new F_Main();
                 form.Closed += (s, args) => this.Close();
                 form.Show();//Depois entender este método do stackoverflow
 
             } else {
                 MessageBox.Show("Dados de acesso inválidos.", "Oops..", MessageBoxButtons.OK ,MessageBoxIcon.Information);
-                tb_user.Clear();
                 tb_password.Clear();
-                tb_user.Focus();
+                tb_password.Focus();
             }
             
         }

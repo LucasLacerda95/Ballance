@@ -214,6 +214,12 @@
     <Compile Include="View\Records\F_CategoriesRecords.Designer.cs">
       <DependentUpon>F_CategoriesRecords.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Records\F_MenuStripRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Records\F_MenuStripRecords.Designer.cs">
+      <DependentUpon>F_MenuStripRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Records\F_UsersRecords.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Records\F_CategoriesRecords.resx">
       <DependentUpon>F_CategoriesRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Records\F_MenuStripRecords.resx">
+      <DependentUpon>F_MenuStripRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Records\F_UsersRecords.resx">
       <DependentUpon>F_UsersRecords.cs</DependentUpon>
