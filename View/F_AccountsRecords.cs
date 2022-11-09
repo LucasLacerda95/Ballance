@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace Ballance.View.Records {
+namespace Ballance.View {
     public partial class F_AccountsRecords : Form {
         public F_AccountsRecords() {
             InitializeComponent();
         }
 
-        private void p_teste_Paint(object sender, PaintEventArgs e) {
+        public void p_teste_Paint(object sender, PaintEventArgs e) {
          
         }
 

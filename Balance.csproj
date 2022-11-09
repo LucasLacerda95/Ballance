@@ -188,6 +188,12 @@
     <Compile Include="Model\DataAcess.cs" />
     <Compile Include="Model\DataModels\User.cs" />
     <Compile Include="Model\Repositories\UserRepository.cs" />
+    <Compile Include="View\F_AddCategoryRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\F_AddCategoryRecords.Designer.cs">
+      <DependentUpon>F_AddCategoryRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\F_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,30 +208,27 @@
     <Compile Include="View\F_Main.Designer.cs">
       <DependentUpon>F_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Records\F_AccountsRecords.cs">
+    <Compile Include="View\F_AccountsRecords.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Records\F_AccountsRecords.Designer.cs">
+    <Compile Include="View\F_AccountsRecords.Designer.cs">
       <DependentUpon>F_AccountsRecords.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Records\F_CategoriesRecords.cs">
+    <Compile Include="View\F_CategoriesRecords.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Records\F_CategoriesRecords.Designer.cs">
+    <Compile Include="View\F_CategoriesRecords.Designer.cs">
       <DependentUpon>F_CategoriesRecords.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Records\F_MenuStripRecords.cs">
+    <Compile Include="View\F_MenuStripRecords.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Records\F_MenuStripRecords.Designer.cs">
+    <Compile Include="View\F_MenuStripRecords.Designer.cs">
       <DependentUpon>F_MenuStripRecords.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Records\F_UsersRecords.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Records\F_UsersRecords.Designer.cs">
-      <DependentUpon>F_UsersRecords.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="View\F_AddCategoryRecords.resx">
+      <DependentUpon>F_AddCategoryRecords.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\F_Login.resx">
       <DependentUpon>F_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,17 +245,14 @@
     <EmbeddedResource Include="View\F_Main.resx">
       <DependentUpon>F_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Records\F_AccountsRecords.resx">
+    <EmbeddedResource Include="View\F_AccountsRecords.resx">
       <DependentUpon>F_AccountsRecords.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Records\F_CategoriesRecords.resx">
+    <EmbeddedResource Include="View\F_CategoriesRecords.resx">
       <DependentUpon>F_CategoriesRecords.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Records\F_MenuStripRecords.resx">
+    <EmbeddedResource Include="View\F_MenuStripRecords.resx">
       <DependentUpon>F_MenuStripRecords.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Records\F_UsersRecords.resx">
-      <DependentUpon>F_UsersRecords.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

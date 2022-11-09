@@ -52,7 +52,7 @@
             this.p_mainMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.p_mainMenu.Location = new System.Drawing.Point(0, 0);
             this.p_mainMenu.Name = "p_mainMenu";
-            this.p_mainMenu.Size = new System.Drawing.Size(162, 507);
+            this.p_mainMenu.Size = new System.Drawing.Size(162, 576);
             this.p_mainMenu.TabIndex = 0;
             // 
             // btn_Logoff
@@ -64,7 +64,7 @@
             this.btn_Logoff.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_Logoff.Image = global::Ballance.Properties.Resources.investimento_p;
             this.btn_Logoff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Logoff.Location = new System.Drawing.Point(0, 453);
+            this.btn_Logoff.Location = new System.Drawing.Point(0, 522);
             this.btn_Logoff.Name = "btn_Logoff";
             this.btn_Logoff.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btn_Logoff.Size = new System.Drawing.Size(162, 54);
@@ -176,7 +176,7 @@
             this.p_mainHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.p_mainHeader.Location = new System.Drawing.Point(162, 0);
             this.p_mainHeader.Name = "p_mainHeader";
-            this.p_mainHeader.Size = new System.Drawing.Size(653, 30);
+            this.p_mainHeader.Size = new System.Drawing.Size(739, 36);
             this.p_mainHeader.TabIndex = 1;
             // 
             // p_mainBody
@@ -184,16 +184,16 @@
             this.p_mainBody.BackColor = System.Drawing.Color.Gainsboro;
             this.p_mainBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p_mainBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p_mainBody.Location = new System.Drawing.Point(162, 30);
+            this.p_mainBody.Location = new System.Drawing.Point(162, 36);
             this.p_mainBody.Name = "p_mainBody";
-            this.p_mainBody.Size = new System.Drawing.Size(653, 477);
+            this.p_mainBody.Size = new System.Drawing.Size(739, 540);
             this.p_mainBody.TabIndex = 2;
             // 
             // F_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 507);
+            this.ClientSize = new System.Drawing.Size(901, 576);
             this.Controls.Add(this.p_mainBody);
             this.Controls.Add(this.p_mainHeader);
             this.Controls.Add(this.p_mainMenu);
@@ -215,7 +215,6 @@
         #endregion
 
         private System.Windows.Forms.Panel p_mainMenu;
-        private System.Windows.Forms.Panel p_mainHeader;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_Home;
         private System.Windows.Forms.Button btn_Logoff;
@@ -224,5 +223,6 @@
         private System.Windows.Forms.Button btn_Transactions;
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.Panel p_mainBody;
+        public System.Windows.Forms.Panel p_mainHeader;
     }
 }
