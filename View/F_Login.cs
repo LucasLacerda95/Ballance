@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
@@ -15,12 +16,22 @@ using System.Windows.Forms;
 namespace Ballance {
     public partial class F_Login : Form {
         //F_Main formMain;
-        
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+       (
+           int nLeftRect,     // x-coordinate of upper-left corner
+           int nTopRect,      // y-coordinate of upper-left corner
+           int nRightRect,    // x-coordinate of lower-right corner
+           int nBottomRect,   // y-coordinate of lower-right corner
+           int nWidthEllipse, // width of ellipse
+           int nHeightEllipse // height of ellipse
+       );
 
         public F_Login() {
             InitializeComponent();
-
-            //formMain = form;//Recebendo formulário da tela principal para manipulá-lo
+            this.FormBorderStyle = FormBorderStyle.None;//Trecho da internet para aplicar o border radius
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
 
@@ -50,5 +61,15 @@ namespace Ballance {
         private void btn_Cancel_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void ll_NewAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            var f_NewAccount = new F_NewAccount();
+            p_LoginForms.Controls.Remove(this);
+            f_NewAccount.TopLevel = false;
+            f_NewAccount.Visible = true;
+            p_LoginForms.Controls.Add(f_NewAccount);
+        }
+
+        
     }
 }

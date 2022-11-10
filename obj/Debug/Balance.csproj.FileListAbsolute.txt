@@ -84,3 +84,4 @@ C:\dev\Ballance\obj\Debug\Ballance.View.F_AccountsRecords.resources
 C:\dev\Ballance\obj\Debug\Ballance.View.F_MenuStripRecords.resources
 C:\dev\Ballance\obj\Debug\Ballance.View.F_CategoriesRecords.resources
 C:\dev\Ballance\obj\Debug\Ballance.View.F_AddCategoryRecords.resources
+C:\dev\Ballance\obj\Debug\Ballance.View.F_NewAccount.resources
