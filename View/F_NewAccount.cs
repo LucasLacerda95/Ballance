@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ballance.Controller;
+using Ballance.Model.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +40,22 @@ namespace Ballance.View {
             this.Close();
         }
 
-        
+        private void btn_register_Click(object sender, EventArgs e) {
+            string user, userName, password, email;
+
+            user = tb_user.Text;
+            userName = tb_userName.Text;
+            password = tb_password.Text;
+            email = tb_email.Text;
+
+            var controller = new UserController(user, userName, password, email);
+            var rows = controller.CreateUser();
+
+            if(rows > 0) {
+                MessageBox.Show("Usuário cadastrado!");
+            } else {
+                MessageBox.Show("Erro ao cadastrar usuário");
+            }
+        }
     }
 }

@@ -23,17 +23,17 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.btn_Cancel = new System.Windows.Forms.Button();
-            this.btn_login = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
+            this.btn_register = new System.Windows.Forms.Button();
             this.tb_password = new System.Windows.Forms.TextBox();
             this.tb_user = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_passwordConfirm = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_userName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tb_email = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,32 +43,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Cancel
+            // btn_close
             // 
-            this.btn_Cancel.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_Cancel.Location = new System.Drawing.Point(273, 286);
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(106, 31);
-            this.btn_Cancel.TabIndex = 6;
-            this.btn_Cancel.Text = "Fechar";
-            this.btn_Cancel.UseVisualStyleBackColor = false;
-            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            this.btn_close.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close.ForeColor = System.Drawing.Color.White;
+            this.btn_close.Location = new System.Drawing.Point(273, 286);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(106, 31);
+            this.btn_close.TabIndex = 6;
+            this.btn_close.Text = "Fechar";
+            this.btn_close.UseVisualStyleBackColor = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
-            // btn_login
+            // btn_register
             // 
-            this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(178)))), ((int)(((byte)(88)))));
-            this.btn_login.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(399, 286);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(106, 31);
-            this.btn_login.TabIndex = 7;
-            this.btn_login.Text = "Cadastrar";
-            this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(178)))), ((int)(((byte)(88)))));
+            this.btn_register.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_register.ForeColor = System.Drawing.Color.White;
+            this.btn_register.Location = new System.Drawing.Point(399, 286);
+            this.btn_register.Name = "btn_register";
+            this.btn_register.Size = new System.Drawing.Size(106, 31);
+            this.btn_register.TabIndex = 7;
+            this.btn_register.Text = "Cadastrar";
+            this.btn_register.UseVisualStyleBackColor = false;
+            this.btn_register.Click += new System.EventHandler(this.btn_register_Click);
             // 
             // tb_password
             // 
@@ -91,16 +92,16 @@
             this.tb_user.Size = new System.Drawing.Size(129, 20);
             this.tb_user.TabIndex = 1;
             // 
-            // textBox1
+            // tb_passwordConfirm
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(390, 178);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 4;
+            this.tb_passwordConfirm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_passwordConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_passwordConfirm.Location = new System.Drawing.Point(390, 178);
+            this.tb_passwordConfirm.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_passwordConfirm.Name = "tb_passwordConfirm";
+            this.tb_passwordConfirm.PasswordChar = '*';
+            this.tb_passwordConfirm.Size = new System.Drawing.Size(129, 20);
+            this.tb_passwordConfirm.TabIndex = 4;
             // 
             // label3
             // 
@@ -135,15 +136,15 @@
             this.button1.Text = "Adicionar Foto";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // tb_userName
             // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(390, 126);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 20);
-            this.textBox2.TabIndex = 2;
+            this.tb_userName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_userName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_userName.Location = new System.Drawing.Point(390, 126);
+            this.tb_userName.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_userName.Name = "tb_userName";
+            this.tb_userName.Size = new System.Drawing.Size(129, 20);
+            this.tb_userName.TabIndex = 2;
             // 
             // label4
             // 
@@ -151,19 +152,19 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(247, 108);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 25;
-            this.label4.Text = "User Name*";
+            this.label4.Text = "Usuário*";
             // 
-            // textBox3
+            // tb_email
             // 
-            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(250, 227);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(170, 20);
-            this.textBox3.TabIndex = 5;
+            this.tb_email.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_email.Location = new System.Drawing.Point(250, 227);
+            this.tb_email.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_email.Name = "tb_email";
+            this.tb_email.Size = new System.Drawing.Size(170, 20);
+            this.tb_email.TabIndex = 5;
             // 
             // panel2
             // 
@@ -203,7 +204,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 31;
-            this.label7.Text = "Name";
+            this.label7.Text = "Nome";
             // 
             // label8
             // 
@@ -225,17 +226,17 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tb_email);
+            this.Controls.Add(this.tb_userName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_passwordConfirm);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tb_password);
             this.Controls.Add(this.tb_user);
-            this.Controls.Add(this.btn_Cancel);
-            this.Controls.Add(this.btn_login);
+            this.Controls.Add(this.btn_close);
+            this.Controls.Add(this.btn_register);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(500, 0);
             this.Name = "F_NewAccount";
@@ -251,17 +252,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_Cancel;
-        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Button btn_register;
         private System.Windows.Forms.TextBox tb_password;
         private System.Windows.Forms.TextBox tb_user;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_passwordConfirm;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_userName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tb_email;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
