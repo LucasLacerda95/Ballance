@@ -40,9 +40,6 @@ namespace Ballance.View {
             DisplayForm(menuStripRecords, p_mainHeader);//Carrega o Menu Strip da tela de Cadastros
         }
 
-        private void btn_Transactions_Click(object sender, EventArgs e) {
-            
-        }
 
 
         private void btn_Logoff_Click(object sender, EventArgs e) {
@@ -58,7 +55,6 @@ namespace Ballance.View {
 
         public void CloseForm(Form form) {//Fecha o formulário para que o painel possa ser populado novamente
             p_mainBody.Controls.Remove(form);
-            form = null;
         }
     }
 }

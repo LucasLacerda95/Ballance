@@ -15,7 +15,6 @@ using System.Windows.Forms;
 
 namespace Ballance {
     public partial class F_Login : Form {
-        //F_Main formMain;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -32,6 +31,14 @@ namespace Ballance {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;//Trecho da internet para aplicar o border radius
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
+        }
+
+
+        private void ll_NewAccount_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e) {
+            var f_NewAccount = new F_NewAccount();
+            f_NewAccount.ShowDialog();
+            //p_LoginForms.Controls.Add(f_NewAccount);
         }
 
 
@@ -45,31 +52,20 @@ namespace Ballance {
 
             if (access == true) {
 
- 
                 var form = new F_Main();
                 form.Closed += (s, args) => this.Close();
                 form.Show();//Depois entender este método do stackoverflow
 
             } else {
-                MessageBox.Show("Dados de acesso inválidos.", "Oops..", MessageBoxButtons.OK ,MessageBoxIcon.Information);
+                MessageBox.Show("Dados de acesso inválidos.", "Oops..", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tb_password.Clear();
                 tb_password.Focus();
             }
-            
         }
+
 
         private void btn_Cancel_Click(object sender, EventArgs e) {
             this.Close();
         }
-
-        private void ll_NewAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            var f_NewAccount = new F_NewAccount();
-            p_LoginForms.Controls.Remove(this);
-            f_NewAccount.TopLevel = false;
-            f_NewAccount.Visible = true;
-            p_LoginForms.Controls.Add(f_NewAccount);
-        }
-
-        
     }
 }

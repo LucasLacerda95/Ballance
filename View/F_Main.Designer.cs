@@ -135,7 +135,6 @@
             this.btn_Transactions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Transactions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Transactions.UseVisualStyleBackColor = true;
-            this.btn_Transactions.Click += new System.EventHandler(this.btn_Transactions_Click);
             // 
             // btn_Home
             // 
