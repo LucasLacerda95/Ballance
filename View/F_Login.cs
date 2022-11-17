@@ -48,7 +48,7 @@ namespace Ballance {
 
 
             var controller = new UserController(user, password);
-            var access = controller.ReadUser();
+            var access = controller._access;
 
             if (access == true) {
 

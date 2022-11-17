@@ -18,44 +18,50 @@ namespace Ballance.Model.Repositories {
         public UserRepository(SqlConnection connection)
             => _connection = connection;
 
-        internal User Get(string user) {
-            var item = new User();
 
+        internal User Get(string userForm) {
+
+       
             try {
-                var query = @"SELECT * FROM [User] WHERE [user_Name] = @exp";
+                var query = @"SELECT * FROM [User] WHERE [user_Name] = @user";
 
-                    item = _connection.QuerySingle<User>(query, new {
-                    exp = $"{user}"
+                var item = _connection.QuerySingle<User>(query, new {
+                    user = $"{userForm}"
                 });
+                //_connection.Close();
 
-                _connection.Close();
+
                 return item;
+                
             } catch(Exception ex) {
                 MessageBox.Show($"{ex}");
-                return item;
+                return null;
             }
         }  
 
 
-        internal int Create(string userForm, string userNameForm, string passwordForm, string emailForm) {
+        internal int Create(string userForm, string userNameForm, string emailForm, string passwordForm) {
             var user = new User();
 
             user.user_Name = userForm;
             user.Name = userNameForm;
-            user.PasswordHash = passwordForm;
             user.Email = emailForm;
+            user.PasswordHash = passwordForm;
 
             try {
-                var query = @"INSERT INTO [User] VALUES (@user_Name,@Name,@PasswordHash,@Email)";
+                var query = @"
+                    INSERT INTO [User]  ([user_Name],[Name],[Email],[PasswordHash]) 
+                    VALUES (@user_Name,@Name,@Email,@PasswordHash)";
 
                 var rows = _connection.Execute(query, new {
                     user.user_Name,
                     user.Name,
-                    user.PasswordHash,
-                    user.Email
+                    user.Email,
+                    user.PasswordHash
                 });
 
                 return rows;
+
             } catch (Exception ex) {
                 MessageBox.Show($"{ex}");
                 return 0;

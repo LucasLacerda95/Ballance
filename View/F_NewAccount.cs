@@ -52,9 +52,10 @@ namespace Ballance.View {
             var rows = controller.CreateUser();
 
             if(rows > 0) {
-                MessageBox.Show("Usuário cadastrado!");
+                MessageBox.Show("Usuário cadastrado com sucesso!");
+                Close();
             } else {
-                MessageBox.Show("Erro ao cadastrar usuário");
+                MessageBox.Show("Erro ao cadastrar usuário!");
             }
         }
     }

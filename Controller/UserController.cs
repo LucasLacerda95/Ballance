@@ -14,29 +14,40 @@ namespace Ballance.Controller {
 
         SqlConnection connection = DataAcess.ConnectionDB();
         string _user, _password, _userName, _email;
+        public Boolean _access = false;
         
+
+
+
+        public UserController(string userForm, string userNameForm, string emailForm, string passwordForm) {
+            _user = userForm;
+            _userName = userForm;
+            _email = emailForm;
+            _password = passwordForm;
+        }
 
         public UserController(string user, string password) {
             _user = user;
-            _password = password;
-        }
+            _password = password;//Veio do FOrm
 
-        public UserController(string userForm, string userNameForm, string passwordForm, string emailForm) {
-            _user = userForm;
-            _userName = userForm;
-            _password = passwordForm;
-            _email = emailForm;
-        }
 
-        public Boolean ReadUser() {//Verifica usuários para login
             var repository = new UserRepository(connection);
-            var userDb = repository.Get(_user);
+            var item = repository.Get(_user);
+            _access = ReadUser(item);
+        }
 
 
-            if (_password == userDb.PasswordHash)
-                return true;
 
-            return false;
+        public Boolean ReadUser(User item) {//Verifica usuários para login
+
+
+            if (item.user_Name == _user && item.PasswordHash == _password) {
+                _access = true;
+                return _access;
+            }
+
+            return _access;
+
         }
 
         public int CreateUser() {//Cadastra usuário
