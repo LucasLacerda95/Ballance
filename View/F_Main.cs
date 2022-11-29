@@ -56,5 +56,10 @@ namespace Ballance.View {
         public void CloseForm(Form form) {//Fecha o formulário para que o painel possa ser populado novamente
             p_mainBody.Controls.Remove(form);
         }
+
+        private void btn_Transactions_Click(object sender, EventArgs e) {
+            var f_NewRelease = new F_NewRelease();
+            DisplayForm(f_NewRelease, p_mainBody);
+        }
     }
 }

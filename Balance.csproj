@@ -232,6 +232,12 @@
     <Compile Include="View\F_NewAccount.Designer.cs">
       <DependentUpon>F_NewAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\F_NewRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\F_NewRelease.Designer.cs">
+      <DependentUpon>F_NewRelease.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\F_AddCategoryRecords.resx">
       <DependentUpon>F_AddCategoryRecords.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\F_NewAccount.resx">
       <DependentUpon>F_NewAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\F_NewRelease.resx">
+      <DependentUpon>F_NewRelease.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

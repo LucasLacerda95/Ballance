@@ -33,16 +33,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.p_mainHeader = new System.Windows.Forms.Panel();
-            this.p_MainHeaderLoggedUser = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.p_mainBody = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.p_mainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.p_mainHeader.SuspendLayout();
-            this.p_MainHeaderLoggedUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // p_mainMenu
@@ -135,6 +129,7 @@
             this.btn_Transactions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Transactions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Transactions.UseVisualStyleBackColor = true;
+            this.btn_Transactions.Click += new System.EventHandler(this.btn_Transactions_Click);
             // 
             // btn_Home
             // 
@@ -178,32 +173,11 @@
             // p_mainHeader
             // 
             this.p_mainHeader.BackColor = System.Drawing.Color.LightGray;
-            this.p_mainHeader.Controls.Add(this.p_MainHeaderLoggedUser);
             this.p_mainHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.p_mainHeader.Location = new System.Drawing.Point(162, 0);
             this.p_mainHeader.Name = "p_mainHeader";
             this.p_mainHeader.Size = new System.Drawing.Size(739, 41);
             this.p_mainHeader.TabIndex = 1;
-            // 
-            // p_MainHeaderLoggedUser
-            // 
-            this.p_MainHeaderLoggedUser.Controls.Add(this.pictureBox2);
-            this.p_MainHeaderLoggedUser.Controls.Add(this.label1);
-            this.p_MainHeaderLoggedUser.Dock = System.Windows.Forms.DockStyle.Right;
-            this.p_MainHeaderLoggedUser.Location = new System.Drawing.Point(539, 0);
-            this.p_MainHeaderLoggedUser.Name = "p_MainHeaderLoggedUser";
-            this.p_MainHeaderLoggedUser.Size = new System.Drawing.Size(200, 41);
-            this.p_MainHeaderLoggedUser.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(101, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Lucas";
             // 
             // p_mainBody
             // 
@@ -214,17 +188,6 @@
             this.p_mainBody.Name = "p_mainBody";
             this.p_mainBody.Size = new System.Drawing.Size(739, 535);
             this.p_mainBody.TabIndex = 2;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(153, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // F_Main
             // 
@@ -245,10 +208,6 @@
             this.p_mainMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.p_mainHeader.ResumeLayout(false);
-            this.p_MainHeaderLoggedUser.ResumeLayout(false);
-            this.p_MainHeaderLoggedUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,8 +224,5 @@
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.Panel p_mainBody;
         public System.Windows.Forms.Panel p_mainHeader;
-        private System.Windows.Forms.Panel p_MainHeaderLoggedUser;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
